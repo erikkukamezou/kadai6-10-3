@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+development:
+  <<: *default
+  database: kadai6-10-3_development
+test:
+  <<: *default
+  database: kadai6-10-3_test
+production:
+  <<: *default
+  database: kadai6-10-3_production
+  username: kadai6-10-3
+  password: <%= ENV['KADAI6-10-3_DATABASE_PASSWORD'] %>
