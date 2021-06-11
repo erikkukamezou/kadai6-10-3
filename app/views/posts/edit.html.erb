@@ -9,10 +9,26 @@
   </div>
 <% end %>
 <%= form_with(model: @post, local: true) do |form| %>
-  <div class="post_content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-  <%= form.submit %>
-<% end %>
-<%= link_to 'ブログ一覧画面に戻る', posts_path %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>編集</title>
+  </head>
+  <body>
+    <header>
+      <h1 class =detail>編集画面</h1>
+    </header>
+    <main>
+      <div class="post_content">
+        <%= form.label :content %>
+        <%= form.text_field :content %>
+      </div>
+      <%= form.submit %>
+    <% end %>
+    </main>
+    <footer>
+     <%= link_to 'ブログ一覧画面に戻る', posts_path %>
+    </footer>
+  </body>
+</html>

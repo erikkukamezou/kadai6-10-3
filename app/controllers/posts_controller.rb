@@ -22,13 +22,10 @@ class PostsController < ApplicationController
     render :new if @post.invalid?
   end
   def show
-     # @post = Post.find(params[:id])
   end
   def edit
-     # @post =Post.find(params[:id])
   end
   def update
-     # @post = Post.find(params[:id])
         if @post.update(post_params)
           redirect_to posts_path, notice: "ブログを編集しました！"
         else
