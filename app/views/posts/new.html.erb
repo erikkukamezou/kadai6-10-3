@@ -1,28 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>新規作成</title>
-  </head>
-  <body>
-    <% if @post.errors.any? %>
-      <div id="error_explanation">
-        <h2 class =error><%= @post.errors.count %>件のエラーがあります。</h2>
-        <ul>
-        <% @post.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
+<% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2 class =error><%= @post.errors.count %>件のエラーがあります。</h2>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
     <% end %>
-    <%= form_with(model: @post, local: true) do |form| %>
+    </ul>
+  </div>
+<% end %>
+    <p　id =new>新規作成</p>
+　　　　  <%= form_with(model: @post, url: choose_new_or_edit, local: true) do |form| %>
       <div class="post_content">
         <%= form.label :content %>
         <%= form.text_field :content %>
       </div>
       <%= form.submit %>
     <% end %>
-    <%= link_to 'ブログ一覧画面に戻る', posts_path %>
-
-  </body>
-</html>
+    <footer id =footer>
+      <%= link_to 'ブログ一覧画面に戻る', posts_path %>
+    </footer>

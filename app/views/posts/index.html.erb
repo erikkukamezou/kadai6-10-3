@@ -1,34 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>投稿一覧</title>
-  </head>
-  <body>
-  <header>
-    <h1 id = list>一覧</h1>
-    <p><%= notice %></p>
-  </header>
-  <main>
-    <table border="3">
-      <tr>
-        <th id =content>内容</th>
-        <th class = "function">機能</th>
-      </tr>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.content %></td>
-        <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
-        <td><%= link_to "ブログを編集する", edit_post_path(post.id) %></td>
-        <td><%= link_to 'ブログを削除する', post_path(post.id), method: :delete %></td>
-      </tr>
-    <% end %>
-    </table>
-  </main>
-  <footer>
+<table border="3">
+    <tr>
+      <th id =content>内容</th>
+      <th class = "function">機能</th>
+    </tr>
+　<% @posts.each do |post| %>
+    <tr>
+      <td><%= post.content %></td>
+      <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
+      <td><%= link_to "ブログを編集する", edit_post_path(post.id) %></td>
+      <td><%= link_to 'ブログを削除する', post_path(post.id), method: :delete %></td>
+    </tr>
+  <% end %>
+</table>
     <br>
     <p id =blog>ブログを追加しよーーーー！</p>
     <%= link_to '新しくブログを投稿する', new_post_path %>
-  </footer>
-  </body>
-</html>

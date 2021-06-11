@@ -4,13 +4,15 @@
 #list {
   font-size: 70px;
   color: red;
+  border: solid;
+  border-color: #031de2;
 }
 #content{
   color: green;
 }
 .post_content{
   font-size: 20px;
-  color: green;
+  color: red;
   background-color: blue;
 }
 .ok{
@@ -23,4 +25,16 @@
   color: blue;
   font-size: 80px;
   background-color: yellow;
+}
+#header{
+  border: solid;
+  border-color: #031de2;
+}
+#main{
+  border: solid;
+  border-color: #031de2;
+}
+#footer{
+  border: solid;
+  border-color: #031de2;
 }

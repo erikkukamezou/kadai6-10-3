@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kadai6103</title>
+    <title>つぶやき</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header id =header>
+      <h3>毎日のつぶやき</h3>
+    </header>
+    <main id =main>
+    　　<%= yield %>
+    </main>
+    <footer id =footer>
+    <p>おわりだよーーーーーー</p>
+    </footer>
   </body>
 </html>
