@@ -10,11 +10,12 @@ class PostsController < ApplicationController
     @post =Post.new(post_params)
     if params[:back]
       render :new
-    end
-    if @post.save
-      redirect_to new_post_path,notice:"ブログを作成しました!"
     else
-      render :new
+      if @post.save
+        redirect_to posts_path,notice:"ブログを作成しました!"
+      else
+        render :new
+      end
     end
   end
   def confirm

@@ -1,9 +1,12 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.header list h1{
+#list {
   font-size: 70px;
   color: red;
+}
+#content{
+  color: green;
 }
 .post_content{
   font-size: 20px;
@@ -12,4 +15,12 @@
 }
 .ok{
   color: red;
+}
+.function{
+  color: orange;
+}
+#blog {
+  color: blue;
+  font-size: 80px;
+  background-color: yellow;
 }
